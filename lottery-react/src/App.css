@@ -1,0 +1,237 @@
+@import url("https://fonts.googleapis.com/css2?family=Hahmlet:wght@300;400;700&display=swap");
+html {
+  font-size: 16px;
+}
+body {
+  color: #333;
+  line-height: 1.6em;
+  font-family: "Hahmlet", serif;
+  background: #f7f1e3;
+}
+.container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+h1 {
+  margin-bottom: 1em;
+  color: #777;
+}
+.btn {
+  cursor: pointer;
+  padding: 1em 1.4em;
+  background: #8e44ad;
+  border-radius: 0.4rem;
+  color: #fff;
+  border: 1px solid #8e44ad;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15), inset 0 -3px 0 rgba(0, 0, 0, 0.1),
+    inset 0 3px 0 rgba(255, 255, 255, 0.2);
+  transition: all 0.3s ease;
+}
+.btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);
+}
+footer {
+  padding: 1rem;
+  margin: 1rem 0 0;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+footer ol {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  padding: 0;
+}
+footer ol li {
+  list-style: none;
+}
+footer ol li a {
+  display: inline-block;
+  font-size: 0.88rem;
+  padding: 0.4em 1em;
+  color: #777;
+  font-weight: 300;
+  letter-spacing: 0.0452em;
+  transition: all 0.3s ease;
+}
+footer ol li a:hover {
+  opacity: 0.45;
+}
+@media (min-width: 768px) {
+  footer ol {
+    flex-direction: row;
+  }
+  footer ol li + li {
+    border-left: 1px solid #ddd;
+  }
+}
+#target-modal {
+  display: none;
+}
+#target-modal:checked ~ .modal {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: initial;
+}
+#target-modal:checked ~ .modal .modal-inner {
+  transform: none;
+}
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: all 0.3s ease-in-out;
+}
+.modal .modal-inner {
+  position: relative;
+  text-align: center;
+  flex: none;
+  max-width: 94%;
+  width: 22rem;
+  padding: 3rem;
+  background: #f7f1e3;
+  border-radius: 8px;
+  z-index: 2;
+  box-shadow: 0 4px 22px rgba(0, 0, 0, 0.45);
+  transform: translate(0, 100%);
+  transition: all 0.3s ease;
+}
+.modal .modal-inner .close-modal {
+  position: absolute;
+  top: 1.2rem;
+  right: 1.2rem;
+  height: 1.2rem;
+  width: 1.2rem;
+  display: inline-block;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='36.18' height='36.18' viewBox='0 0 36.18 36.18'%3E%3Cpath d='M18.09,3.015A15.075,15.075,0,1,1,3.015,18.09,15.092,15.092,0,0,1,18.09,3.015ZM18.09,0A18.09,18.09,0,1,0,36.18,18.09,18.091,18.091,0,0,0,18.09,0Zm9.045,24.931-6.922-6.856,6.853-6.915L24.931,9.045l-6.852,6.918L11.163,9.114,9.045,11.232l6.924,6.862L9.114,25.017l2.118,2.118L18.1,20.206l6.921,6.859,2.115-2.135Z' fill='%23333'/%3E%3C/svg%3E%0A");
+  background-size: contain;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.modal .modal-inner .close-modal:hover {
+  opacity: 0.45;
+}
+.modal .modal-inner h2 {
+  font-size: 3rem;
+}
+.modal .modal-inner h3 {
+  font-weight: 400;
+}
+.modal .overlay-modal {
+  position: absolute;
+  background: rgba(0, 0, 0, 0.75);
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+}
+HTML CSS BabelResult Skip Results Iframe EDIT ON .lds-spinner {
+  color: white;
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+.lds-spinner div {
+  transform-origin: 40px 40px;
+  animation: lds-spinner 1.2s linear infinite;
+}
+.lds-spinner div:after {
+  content: " ";
+  display: block;
+  position: absolute;
+  top: 3px;
+  left: 37px;
+  width: 6px;
+  height: 18px;
+  border-radius: 20%;
+  background: blue;
+}
+.lds-spinner div:nth-child(1) {
+  transform: rotate(0deg);
+  animation-delay: -1.1s;
+}
+.lds-spinner div:nth-child(2) {
+  transform: rotate(30deg);
+  animation-delay: -1s;
+}
+.lds-spinner div:nth-child(3) {
+  transform: rotate(60deg);
+  animation-delay: -0.9s;
+}
+.lds-spinner div:nth-child(4) {
+  transform: rotate(90deg);
+  animation-delay: -0.8s;
+}
+.lds-spinner div:nth-child(5) {
+  transform: rotate(120deg);
+  animation-delay: -0.7s;
+}
+.lds-spinner div:nth-child(6) {
+  transform: rotate(150deg);
+  animation-delay: -0.6s;
+}
+.lds-spinner div:nth-child(7) {
+  transform: rotate(180deg);
+  animation-delay: -0.5s;
+}
+.lds-spinner div:nth-child(8) {
+  transform: rotate(210deg);
+  animation-delay: -0.4s;
+}
+.lds-spinner div:nth-child(9) {
+  transform: rotate(240deg);
+  animation-delay: -0.3s;
+}
+.lds-spinner div:nth-child(10) {
+  transform: rotate(270deg);
+  animation-delay: -0.2s;
+}
+.lds-spinner div:nth-child(11) {
+  transform: rotate(300deg);
+  animation-delay: -0.1s;
+}
+.lds-spinner div:nth-child(12) {
+  transform: rotate(330deg);
+  animation-delay: 0s;
+}
+@keyframes lds-spinner {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+.spinner {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.473);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+mark {
+  background-color: green;
+}
